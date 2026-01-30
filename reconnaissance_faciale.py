@@ -5,6 +5,10 @@ from deepface import DeepFace
 # Initialisation du la caméra
 cam = cv2.VideoCapture(0)
 
+
+cam.set(cv2.CAP_PROP_FRAME_HEIGHT,640)
+cam.set(cv2.CAP_PROP_FRAME_WIDTH,480)
+
 # un compteur pour ne pas faire des testes sur chaque frame => une rapidité d'utilisation
 compteur=0
 
