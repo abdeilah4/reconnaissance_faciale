@@ -1,4 +1,4 @@
-# 📸 Système de Reconnaissance Faciale en Temps Réel
+# Système de Reconnaissance Faciale en Temps Réel
 
 Ce projet est une application de reconnaissance faciale en temps réel performante développée en Python. Elle utilise **OpenCV** pour la capture vidéo et **DeepFace** pour l'analyse biotmétrique.
 
