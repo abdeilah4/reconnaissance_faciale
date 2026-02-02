@@ -1,84 +1,84 @@
-Système de Reconnaissance Faciale en Temps Réel
+# 📸 Système de Reconnaissance Faciale en Temps Réel
 
-Ce projet est une application de reconnaissance faciale en temps réel développée en Python avec OpenCV et DeepFace.
-Il permet de comparer un visage capturé par la webcam à une image de référence afin de vérifier l’identité d’une personne.
+Ce projet est une application de reconnaissance faciale en temps réel performante développée en Python. Elle utilise **OpenCV** pour la capture vidéo et **DeepFace** pour l'analyse biotmétrique.
 
-Description
+L'application compare instantanément le visage capturé par votre webcam avec une image de référence pour authentifier une identité.
 
-Le programme utilise la webcam pour afficher la vidéo en direct.
-À intervalles réguliers, le visage détecté est comparé à l’image de référence stockée dans le dossier assets.
+---
 
-Si les visages correspondent : le message "Similaire !" s’affiche en vert.
+## Description
 
-Sinon : le message "Non Similaire !" s’affiche en rouge.
+Le programme analyse le flux vidéo de la webcam. À intervalles optimisés (via multithreading), il compare le visage détecté à une image de référence stockée dans le dossier `assets/`.
 
-Ce projet a été réalisé à des fins pédagogiques pour l’apprentissage de la vision par ordinateur avec Python.
-
-Fonctionnalités
-
-Capture vidéo en temps réel via la webcam
-
-Reconnaissance faciale avec DeepFace
-
-Optimisation des performances en évitant les comparaisons à chaque image
-
-Affichage clair du résultat de la reconnaissance
-
-Multithreading pour améliorer la fluidité
-
-Technologies utilisées
-
-Python 3
-
-OpenCV
-
-DeepFace
-
-Threading
-
-Installation
-Prérequis
-
-Python 3.7 ou supérieur
-
-Une webcam fonctionnelle
-
-pip installé
-
-Étapes
-
-1-Cloner le projet
-
-git clone https://github.com/abdeilah4/reconnaissance_faciale.git
-cd reconnaissance_faciale
+* **Succès** : Le message **"Similaire !"** s’affiche en vert si le visage correspond.
+* **Échec** : Le message **"Non Similaire !"** s’affiche en rouge si aucune correspondance n'est trouvée.
 
 
-2-Créer un environnement virtuel (optionnel mais recommandé)
 
-python -m venv venv
-venv\Scripts\activate  # Windows
-# ou
-source venv/bin/activate  # Linux / Mac
+---
+
+## Fonctionnalités
+
+*  **Capture Vidéo fluide** : Intégration directe avec la webcam via OpenCV.
+*  **Intelligence Artificielle** : Utilisation de DeepFace pour une reconnaissance précise.
+*  **Optimisation Multithreading** : La vérification faciale s'exécute en arrière-plan pour ne pas ralentir le flux vidéo.
+*  **Interface Visuelle** : Feedback immédiat sur l'écran avec texte coloré.
+
+---
+
+## Structure du Projet
+
+```text
+OpenCvTest/
+├── assets/
+│   └── img1.png          # Image de référence pour la comparaison
+├── reconnaissance_faciale.py # Script principal de l'application
+├── requirements.txt      # Dépendances du projet
+└── README.md             # Documentation
+```
+
+---
+
+## Installation
+
+### Prérequis
+*   Python 3.8+
+*   Une webcam fonctionnelle
+*   `pip` (gestionnaire de paquets Python)
+
+### Étapes
+
+1.  **Cloner le projet**
+    ```bash
+    git clone https://github.com/abdeilah4/reconnaissance_faciale.git
+    cd reconnaissance_faciale
+    ```
 
 
-3-Installer les dépendances
+2. **Installer les dépendances**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-pip install -r requirements.txt
+3. **Configurer l'image de référence**
+    *   Placez une photo claire de votre visage dans le dossier `assets/`.
+    *   Nommez-la impérativement `img1.png` (ou modifiez le script à la ligne 11).
 
+---
 
-4-modifier l’image de référence
+## Utilisation
 
-Placer une image de visage dans le dossier assets
+Lancez simplement le script :
 
-Nom par défaut : img1.png
-
-Utilisation
-
-Lancer le programme avec :
-
+```bash
 python reconnaissance_faciale.py
+```
+
+*   **Quitter** : Appuyez sur la touche `q` pour fermer l'application.
+
+---
 
 
-La vidéo de la webcam s’affiche avec le résultat de la reconnaissance
+##  Auteur
 
-Appuyer sur la touche q pour quitter le programme
+**Abdelilah TAHIRI**
